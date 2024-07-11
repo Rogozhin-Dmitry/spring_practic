@@ -24,6 +24,10 @@ public class User extends BaseUser {
             fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<UserLesson> userLessons;
 
+    @OneToMany(mappedBy = "user", targetEntity = LessonMarks.class,
+            fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<LessonMarks> lessonMarks;
+
     @Column(name = "birth_day")
     public Date getDateOfBirth() {
         return dateOfBirth;

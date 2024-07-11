@@ -6,7 +6,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "lessons")
-public class Lesson extends BaseEntity{
+public class Lesson extends BaseEntity {
 
     private Mentor mentor;
     private String label;
@@ -28,6 +28,10 @@ public class Lesson extends BaseEntity{
     @OneToMany(mappedBy = "lesson", targetEntity = UserLesson.class,
             fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<UserLesson> userLessons;
+
+    @OneToMany(mappedBy = "lesson", targetEntity = LessonMarks.class,
+            fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private Set<LessonMarks> lessonMarks;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_mentor", referencedColumnName = "id")
