@@ -22,7 +22,7 @@ public class LessonMarks extends BaseEntity {
         this.timeOfMaking = timeOfMaking;
     }
 
-    public LessonMarks() {
+    protected LessonMarks() {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

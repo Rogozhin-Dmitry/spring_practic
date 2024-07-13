@@ -17,7 +17,7 @@ public class UserLesson extends BaseEntity {
         this.dateOfAdd = dateOfAdd;
     }
 
-    public UserLesson() {
+    protected UserLesson() {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)

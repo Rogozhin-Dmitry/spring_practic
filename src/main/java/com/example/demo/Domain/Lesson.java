@@ -22,7 +22,7 @@ public class Lesson extends BaseEntity {
         this.complexity = complexity;
     }
 
-    public Lesson() {
+    protected Lesson() {
     }
 
     @OneToMany(mappedBy = "lesson", targetEntity = UserLesson.class,

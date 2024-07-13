@@ -9,6 +9,7 @@ import jakarta.persistence.*;
 @Table(name = "users")
 public class User extends BaseUser {
     private Date dateOfBirth;
+    private Integer level;
 
     public User(String email, String name, Date dateOfBirth, Date dateOfRegistration) {
         this.email = email;
@@ -35,5 +36,14 @@ public class User extends BaseUser {
 
     public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
+    }
+
+    @Column(name = "level")
+    public Integer getLevel() {
+        return level;
+    }
+
+    public void setLevel(Integer level) {
+        this.level = level;
     }
 }

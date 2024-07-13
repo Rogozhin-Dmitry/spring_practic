@@ -17,7 +17,7 @@ public class Mentor extends BaseUser {
         this.dateOfRegistration = dateOfRegistration;
     }
 
-    public Mentor() {
+    protected Mentor() {
     }
 
     @OneToMany(mappedBy = "mentor", targetEntity = Lesson.class,
