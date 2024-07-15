@@ -6,7 +6,7 @@ import java.sql.Time;
 import java.util.Date;
 
 @Entity
-@Table(name = "userLesson")
+@Table(name = "lessons_marks")
 public class LessonMarks extends BaseEntity {
     private User user;
     private Lesson lesson;
@@ -63,7 +63,7 @@ public class LessonMarks extends BaseEntity {
         this.dateOfMaking = dateOfMaking;
     }
 
-    @Column(name = "time")
+    @Column(name = "making_time")
     public Float getTimeOfMaking() {
         return timeOfMaking;
     }

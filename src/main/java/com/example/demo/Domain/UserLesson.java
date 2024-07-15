@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "userLesson")
+@Table(name = "users_lessons")
 public class UserLesson extends BaseEntity {
     private User user;
     private Lesson lesson;

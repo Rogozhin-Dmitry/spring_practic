@@ -21,9 +21,9 @@ public class SpringPracticApplication {
 //                Persistence.createEntityManagerFactory("hibernate_jpa_demo");
 //        EntityManager em = emf.createEntityManager();
 //        em.getTransaction().begin();
-        PersistenceUnitUserService dff = new PersistenceUnitUserService();
-        User user = new User("refdsfs", "gffdg", new Date(2004, 5, 11), new Date(2004, 5, 11));
-        dff.insertUser(user);
+//        PersistenceUnitUserService dff = new PersistenceUnitUserService();
+//        User user = new User("refdsfs", "gffdg", new Date(2004, 5, 11), new Date(2004, 5, 11));
+//        dff.insertUser(user);
 //
 //        em.persist(user);
 //        System.out.println(dff.find(1));
