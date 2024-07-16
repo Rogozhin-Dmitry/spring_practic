@@ -26,7 +26,7 @@ public class LessonMarks extends BaseEntity {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user", referencedColumnName = "id")
+    @JoinColumn(name = "id_user", referencedColumnName = "id", nullable = false)
     public User getUser() {
         return user;
     }
@@ -36,7 +36,7 @@ public class LessonMarks extends BaseEntity {
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_lesson", referencedColumnName = "id")
+    @JoinColumn(name = "id_lesson", referencedColumnName = "id", nullable = false)
     public Lesson getLesson() {
         return lesson;
     }

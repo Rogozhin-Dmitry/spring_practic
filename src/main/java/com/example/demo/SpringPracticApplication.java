@@ -12,7 +12,6 @@ import java.util.Date;
 
 @SpringBootApplication
 public class SpringPracticApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(SpringPracticApplication.class, args);
 

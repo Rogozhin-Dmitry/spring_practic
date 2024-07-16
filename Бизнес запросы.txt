@@ -43,5 +43,5 @@ ORDER BY count(theme) DESC;
 SELECT level, making_time, mark, date
 FROM lessons_marks
 JOIN users ON users.id = id_user
-WHERE id_lesson = 10
+WHERE id_lesson = "ид урока для которого нужна статистика"
 ORDER BY level DESC, making_time, date DESC;

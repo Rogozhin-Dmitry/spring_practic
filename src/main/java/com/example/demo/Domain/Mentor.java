@@ -9,12 +9,15 @@ import java.util.Set;
 @Table(name = "mentors")
 public class Mentor extends BaseUser {
     private String description;
+    private Set<Lesson> lessons;
 
-    public Mentor(String email, String name, String description, Date dateOfRegistration) {
+    public Mentor(String email, String name, String description, Date dateOfRegistration, Set<Lesson> lessons) {
         this.email = email;
         this.name = name;
         this.description = description;
         this.dateOfRegistration = dateOfRegistration;
+        this.lessons = lessons;
+
     }
 
     protected Mentor() {
@@ -22,7 +25,13 @@ public class Mentor extends BaseUser {
 
     @OneToMany(mappedBy = "mentor", targetEntity = Lesson.class,
             fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private Set<Lesson> lessons;
+    public Set<Lesson> getLessons() {
+        return lessons;
+    }
+
+    public void setLessons(Set<Lesson> lessons) {
+        this.lessons = lessons;
+    }
 
     @Column(name = "description")
     public String getDescription() {
