@@ -1,7 +1,18 @@
 package com.example.demo.Repositories;
 
-import com.example.demo.Domain.LessonMarks;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 
-public interface LessonMarksRepository extends JpaRepository<LessonMarks, Integer> {
+import java.sql.Timestamp;
+import java.util.List;
+import java.util.Set;
+
+@Component
+public interface LessonMarksRepository {
+    Set<Integer> getLessonIdsByUserId(Integer userId);
+
+    Set<String> getLessonsThemesByUserIdOrderedMarkTime(Integer userId);
+
+    List<Object[]> getUserLevelLessonMakingTimeMarkDateByLessonIdOrderedLevelMakingTimeDate(Integer lessonId);
+
+    Set<Integer> getLessonIdsBetweenDatesGroupedByLessonsId(Timestamp date1, Timestamp date2);
 }

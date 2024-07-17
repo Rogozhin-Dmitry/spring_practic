@@ -1,7 +1,7 @@
 package com.example.demo.Repositories;
 
-import com.example.demo.Domain.UserLesson;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Component;
 
-public interface UserLessonsRepository extends JpaRepository<UserLesson, Integer> {
+@Component
+public interface UserLessonsRepository {
 }
