@@ -9,7 +9,7 @@ LIMIT 5;
 МБ добавить время за которое анализируем
 
 SELECT DISTINCT id_lesson
-FROM public.lessons_marks
+FROM lessons_marks
 WHERE id_user = "ид юзвера";
 
 SELECT complexity, id, label, theme
