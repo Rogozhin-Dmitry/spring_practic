@@ -5,5 +5,5 @@ import com.example.demo.Repositories.UserRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserRepositoryImpl extends BaseRepository<User> implements UserRepository {
+public class UserRepositoryImpl implements UserRepository {
 }

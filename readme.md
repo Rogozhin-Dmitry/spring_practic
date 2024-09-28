@@ -11,7 +11,7 @@
 ## Бизнес запросы по заданию
 
 1. Сформировать для пользователя перечень следующих уроков на основе пройденных и оценок за них (исходя из ошибок,
-   времени выполенения и т.д.)
+   времени выполнения и т.д.)
 
 - http://localhost:8080/get_next_lessons/{userId}
 
@@ -36,7 +36,7 @@
 SELECT theme
 FROM lessons_marks
 JOIN lessons ON lessons.id = id_lesson
-WHERE id_user = {ид юзвера}
+WHERE id_user = {ид юзера}
 ORDER BY mark, making_time DESC
 LIMIT 5;
 ```
@@ -44,7 +44,7 @@ LIMIT 5;
 ```SQL
 SELECT DISTINCT id_lesson
 FROM lessons_marks
-WHERE id_user = {ид юзвера};
+WHERE id_user = {ид юзера};
 ```
 
 ```SQL

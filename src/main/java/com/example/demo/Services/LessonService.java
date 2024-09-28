@@ -38,6 +38,11 @@ public class LessonService {
         Timestamp date2 = Timestamp.valueOf(LocalDateTime.of(2024, 7, 15, 0, 0));
 
         Set<Integer> lessonIds = lessonMarksService.getLessonIdsBetweenDatesGroupedByLessonsId(date1, date2);
-        return  lessonRepository.getThemesByLessonIdsGroupByThemesOrderedByCount(lessonIds);
+        List<ThemeDTO> themeDTOs = new java.util.ArrayList<>(List.of());
+
+        for (Object[] lessonTheme: lessonRepository.getThemesByLessonIdsGroupByThemesOrderedByCount(lessonIds)) {
+            themeDTOs.add(new ThemeDTO((String) lessonTheme[0]));
+        }
+        return  themeDTOs;
     }
 }

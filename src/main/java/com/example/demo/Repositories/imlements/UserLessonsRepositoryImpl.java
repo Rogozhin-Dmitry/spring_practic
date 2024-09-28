@@ -5,5 +5,5 @@ import com.example.demo.Repositories.UserLessonsRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class UserLessonsRepositoryImpl extends BaseRepository<UserLesson> implements UserLessonsRepository {
+public class UserLessonsRepositoryImpl implements UserLessonsRepository {
 }
