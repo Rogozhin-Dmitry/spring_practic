@@ -1,7 +1,7 @@
 package com.example.demo.Repositories;
 
-import org.springframework.stereotype.Component;
+import com.example.demo.Domain.Mentor;
+import org.springframework.data.repository.Repository;
 
-@Component
-public interface MentorRepository {
+public interface MentorRepository extends Repository<Mentor, Integer> {
 }

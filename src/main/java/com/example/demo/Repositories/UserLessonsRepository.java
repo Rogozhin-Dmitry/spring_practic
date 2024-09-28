@@ -1,7 +1,7 @@
 package com.example.demo.Repositories;
 
-import org.springframework.stereotype.Component;
+import com.example.demo.Domain.UserLesson;
+import org.springframework.data.repository.Repository;
 
-@Component
-public interface UserLessonsRepository {
+public interface UserLessonsRepository  extends Repository<UserLesson, Integer> {
 }
